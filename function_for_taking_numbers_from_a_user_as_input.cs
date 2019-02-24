@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +18,17 @@ namespace Fundamentals_of_computer_programming_with_CSharp
             // Function 'PleaseEnterSomeNumbers()' gets one parameter [integer number] that defines 
             // how much times a user will be asked for a number and returns an integer array of those numbers,
             // therefore the function treated as array when called.
-            foreach (int n in PleaseEnterSomeNumbers(3)) { Console.WriteLine(n); }
+            // Cloning needed because each attempt to address an element in the array that
+            // the function represents cause executing the function 
+            // which need a user interaction. 
+            // By cloning the array we can address the function only once.
+            
+            int[] arrayOfNumbers = (int[])PleaseEnterSomeNumbers(3).Clone();
+            
+            
+            
+            foreach (int n in arrayOfNumbers) 
+            { Console.WriteLine(n); }
             Console.WriteLine("--------------------------\n");
         }
 
