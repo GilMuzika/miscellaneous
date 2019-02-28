@@ -10,14 +10,6 @@ namespace CSharp_Shell
     {
         public static void Main(string[] args) 
         {
-           /*int num = 60;
-           int position1 = 3;
-           int position2 = 4;
-           int position3 = 5;
-           
-           int changePosition1 = 24;
-           int changePosition2 = 25;
-           int changePosition3 = 26;*/
            
            int[] arrayOfNumbers = (int[])PleaseEnterSomeNumbers(4).Clone();
            
@@ -36,19 +28,7 @@ namespace CSharp_Shell
             Console.WriteLine("\n| "+number+" | ");
             
             
-            /*
-            int numChanged = ChangingPosition(num, position1, changePosition1);
-           
-            Console.WriteLine("\n| "+numChanged+" | ");
             
-            numChanged = ChangingPosition(numChanged, position2, changePosition2);
-           
-            Console.WriteLine("\n| "+numChanged+" | ");
-            
-            numChanged = ChangingPosition(numChanged, position3, changePosition3);
-           
-            Console.WriteLine("\n| "+numChanged+" | ");
-            */
         }
         
         
