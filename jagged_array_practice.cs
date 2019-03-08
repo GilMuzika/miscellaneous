@@ -11,6 +11,7 @@ namespace CSharp_Shell
     {
         public static void Main(string[] args) 
         {
+           // creating a two ordinary 'string[]' arrays
            string[] hebrewNumbers = new string[11];
            hebrewNumbers[0] = "אפס";
            hebrewNumbers[1] = "אחד";
@@ -39,9 +40,12 @@ namespace CSharp_Shell
            englishNumbers[10] = "Ten";
            
            
+          
+           // declaring a jagged aray
            string[][] mlngNames = new string[2][]; //declaring a nrw jagged array of 2 arrays
            
            
+            // filling the jagged arrayvwith values using the previously created plain arrays
             mlngNames[0] = new string[hebrewNumbers.Length]; //declaring a new array that is a first of the jagged array
             for (int i = 0; i < hebrewNumbers.Length; i++)   
                 {
@@ -55,7 +59,7 @@ namespace CSharp_Shell
                 }
            
            
-           
+           // accsessing to the jagged array and displaying it's values
            for (int i = 0; i < mlngNames.Length; i++) 
                {
                    // Console.WriteLine("a");

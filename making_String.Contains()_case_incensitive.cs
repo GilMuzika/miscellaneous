@@ -35,7 +35,7 @@ namespace CSharp_Shell
            
            for (int i = 0; i < animals.Length; i++)
                {
-                   Console.WriteLine("Муха-цокотуха, Комар-пискун, Мышка-норушка, Лягушка-квакушка, Волк-волчище.".Contains(animals[i], StringComparison.OrdinalIgnoreCase));
+                   Console.WriteLine("Муха-цокотуха, Комар-пискун, Мышка-норушка, Лягушка-квакушка, Волк-волчище.".ToUpper().Contains(animals[i].ToUpper(), StringComparison.OrdinalIgnoreCase));
                    Console.WriteLine(animals[i]);
                }
            
