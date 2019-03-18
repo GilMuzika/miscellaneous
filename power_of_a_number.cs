@@ -22,15 +22,18 @@ namespace CSharp_Shell
         
         
         
-        static decimal Power(decimal x, decimal n)
+        // this,function actually calculates power. It takes two parameters, 
+        // the first is the number that it's power to be calculated, 
+        // and the second is the power of the number.
+        static decimal Power(decimal num, decimal pow)
         {
-            decimal firstX = x;
-            for(int i = 2; i <= n; i++)
+            decimal firstNum = num;
+            for(int i = 2; i <= pow; i++)
             {
-                x=x*firstX;
+                num=num*firstNum;
             }
             
-            return x;
+            return num;
         }
         
         
