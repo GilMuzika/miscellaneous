@@ -47,7 +47,7 @@ namespace Fundamentals_of_computer_programming_with_CSharp
                 if (i != 0) { Console.WriteLine("Please enter a number: \n"); }
                 decimal line;
             EnterNumber:
-                if (Decimal.TryParse(Console.ReadLine(), out line)) { arriterations[i] = line; }
+                if (Decimal.TryParse(Console.ReadLine(), out line)) { arriterations.SetValue(line, i); }
                 else { Console.WriteLine("\n This is not a number! \nPlease enter only numbers. \nNow lets try again: \n"); goto EnterNumber; }
                 //Console.Clear();
             }
