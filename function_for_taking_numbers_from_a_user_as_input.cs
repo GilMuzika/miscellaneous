@@ -46,9 +46,8 @@ namespace Fundamentals_of_computer_programming_with_CSharp
                 if (i > 0) { Console.Clear(); }
                 if (i != 0) { Console.WriteLine("Please enter a number: \n"); }
                 int line;
-            EnterNumber:
                 if (Int32.TryParse(Console.ReadLine(), out line)) { arriterations[i] = line; }
-                else { Console.WriteLine("\n This is not a number! \nPlease enter only numbers. \nNow lets try again: \n"); goto EnterNumber; }
+                else { Console.WriteLine("\n This is not a number! \nPlease enter only numbers. \nNow lets try again: \n"); PleaseEnterSomeNumbers(iterations); }
                 //Console.Clear();
             }
 
