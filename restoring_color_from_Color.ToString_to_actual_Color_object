@@ -1,0 +1,33 @@
+private Color colorFromString(string colorString)
+        {
+            System.Array colorsArray = Enum.GetValues(typeof(KnownColor));
+            KnownColor[] allColors = new KnownColor[colorsArray.Length];
+            Array.Copy(colorsArray, allColors, colorsArray.Length);
+
+            Color colorFromString = new Color();
+            for (int i = 0; i < allColors.Length; i++)
+            {
+                bool cont = false;
+                int j;
+                for(j = 0; j < allColors.Length; j++)
+                {
+                    if (colorString.Contains(allColors[j].ToString())) { cont = true; break; }
+                }
+
+                if (cont) { colorFromString = Color.FromKnownColor(allColors[j]); }
+                else
+                {
+                    colorString = colorString.Replace(" ", string.Empty);
+                    string A = colorString.Substring(colorString.IndexOf("=") + 1, colorString.IndexOf(",") - colorString.IndexOf("=") - 1);
+                    string R = colorString.Substring(colorString.IndexOf("=", colorString.IndexOf("=") + 1) + 1, colorString.IndexOf(",", colorString.IndexOf(",") + 1) - colorString.IndexOf("=", colorString.IndexOf("=") + 1) - 1);
+                    string G = colorString.Substring(colorString.LastIndexOf("=", colorString.LastIndexOf("=") - 1) + 1, colorString.LastIndexOf(",") - colorString.LastIndexOf("=", colorString.LastIndexOf("=") - 1) - 1);
+                    string B = colorString.Substring(colorString.LastIndexOf("=") + 1, colorString.LastIndexOf("]") - colorString.LastIndexOf("=") - 1);
+
+                    colorFromString = Color.FromArgb(Convert.ToInt32(A), Convert.ToInt32(R), Convert.ToInt32(G), Convert.ToInt32(B));
+                }
+                
+               //Color [A=255, R=26, G=179, B=95]
+            }
+            return colorFromString;
+
+        }
