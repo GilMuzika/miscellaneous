@@ -58,11 +58,11 @@ namespace CSharp_Shell
         string[,] partBinHex = new string[2,16];    
         
         
-            for (int i = 0; i < partBinHex.Length/2; i++)
+            for (int i = 0; i < partBinHex.GetLength(1); i++)
             {
                 partBinHex[0, i] = partBin[i];
             }
-            for (int i = 0; i < partBinHex.Length/2; i++)
+            for (int i = 0; i < partBinHex.GetLength(1); i++)
             {
                 partBinHex[1, i] = partHex[i];
             }
